@@ -1,4 +1,6 @@
-for (i = 0; i < 70; i++) {
+timepoints = ;
+
+for (i = 0; i < timepoints; i++) {
 	run("Duplicate...", i);
 }
 run("Images to Stack", "use");
@@ -22,4 +24,4 @@ for (i = 0; i < names.length; i++) {
 
 run("Concatenate...", "open image1=C1.tif image2=C2.tif image3=Stack");
 
-run("Stack to Hyperstack...", "order=xytzc channels=3 slices=1 frames=70 display=Grayscale");
+run("Stack to Hyperstack...", "order=xytzc channels=3 slices=1 frames="+timepoints+" display=Grayscale");
